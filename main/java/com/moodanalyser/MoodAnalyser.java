@@ -1,5 +1,9 @@
 package com.moodanalyser;
-
+/**
+ * @description Class for defining the Mood Analyser
+ * @param
+ *
+ */
 public class MoodAnalyser {
     public String analyseMood(String message) {
             try {
