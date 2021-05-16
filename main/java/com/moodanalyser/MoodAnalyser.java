@@ -24,12 +24,12 @@ public class MoodAnalyser {
         return  "HAPPY";
     }
 
-    public String analyseMood2(String message) {
+    public String analyseMood2(String message) throws MoodAnalysisException {
     try {
         if(message.contains("HAPPY"))
         return "Happy";
     } catch (NullPointerException e) {
-        return "HAPPY";
+        throw new MoodAnalysisException("Please give proper message");
     }
     return message;
     }

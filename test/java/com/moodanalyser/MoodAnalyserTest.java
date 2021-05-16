@@ -24,10 +24,16 @@ public class MoodAnalyserTest {
     }
 
     @Test
-    public void Null_Mood_Should_Return_HAPPY() {
+    public void Null_Mood_Should_Return_HAPPY() throws MoodAnalysisException {
         MoodAnalyser moodAnalyser = new MoodAnalyser("I am in HAPPY mood");
         String mood = moodAnalyser.analyseMood2(null);
         Assertions.assertEquals("HAPPY", mood);
     }
 
+    @Test
+    public void Empty_Mood_Should_throw_Exception() throws MoodAnalysisException {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        String mood = moodAnalyser.analyseMood2(null);
+        Assertions.assertEquals("HAPPY", mood);
+    }
 }
