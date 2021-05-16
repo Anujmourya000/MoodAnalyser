@@ -26,10 +26,12 @@ public class MoodAnalyser {
 
     public String analyseMood2(String message) throws MoodAnalysisException {
     try {
+        if ((message.length() == 0))
+            throw new MoodAnalysisException(MoodAnalysisException.Exceptiontype.ENTERED_NULL, "Please give proper message");
         if(message.contains("HAPPY"))
         return "Happy";
     } catch (NullPointerException e) {
-        throw new MoodAnalysisException("Please give proper message");
+        throw new MoodAnalysisException(MoodAnalysisException.Exceptiontype.ENTERED_EMPTY, "Please give Proper message");
     }
     return message;
     }

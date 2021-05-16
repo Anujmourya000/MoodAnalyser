@@ -33,7 +33,10 @@ public class MoodAnalyserTest {
     @Test
     public void Empty_Mood_Should_throw_Exception() throws MoodAnalysisException {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-        String mood = moodAnalyser.analyseMood2(null);
-        Assertions.assertEquals("HAPPY", mood);
+        try {
+            String mood = moodAnalyser.analyseMood2(null);
+        } catch (MoodAnalysisException e) {
+            Assertions.assertEquals(MoodAnalysisException.Exceptiontype.ENTERED_NULL, e.type);
+        }
     }
 }
