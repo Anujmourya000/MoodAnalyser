@@ -3,8 +3,8 @@ package com.moodanalyser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 /**
- * @description Class for defining the Mood Analyser Test
- * @param
+ * @description class for defining the Mood Analyser Test
+ *
  *
  */
 public class MoodAnalyserTest {
@@ -16,4 +16,10 @@ public class MoodAnalyserTest {
         Assertions.assertEquals("SAD", mood);
     }
 
+    @Test
+    public void check_For_Message_Should_Return_HAPPY() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in HAPPY mood");
+        String mood = moodAnalyser.analyseMood1();
+        Assertions.assertEquals("HAPPY", mood);
+    }
 }

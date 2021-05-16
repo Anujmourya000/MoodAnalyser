@@ -7,16 +7,21 @@ package com.moodanalyser;
  */
 public class MoodAnalyser {
     /**
-     * @description Constructor fot Mood Analyser
+     * @description Constructor for Mood Analyser
      * @param
      *
      */
     public MoodAnalyser(String message) {
         if(message.contains("SAD"))
         analyseMood();
+        else
+            analyseMood1();
     }
     //method for calling in constructor
-    public String analyseMood() {
+     public String analyseMood() {
         return "SAD";
+    }
+     public String analyseMood1(){
+        return  "HAPPY";
     }
 }
